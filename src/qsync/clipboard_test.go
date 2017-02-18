@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"github.com/atotto/clipboard"
+	"testing"
 )
 
-func TestClipboard() {
+func TestClipboard(t *testing.T) {
 	if err := clipboard.WriteAll(string("hello")); err != nil {
 		panic(err)
 	}
-	fmt.Println("su")
 }
