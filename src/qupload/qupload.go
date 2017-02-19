@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 	//"github.com/KDF5000/qsync"
+	"github.com/KDF5000/QiniuCmd/src/qsync"
 	"github.com/atotto/clipboard"
 	"os"
-	"qsync"
 )
 
 func usage() {
