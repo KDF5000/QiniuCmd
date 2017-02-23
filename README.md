@@ -12,7 +12,7 @@
 ```
 #切换到你想要放置代码的目录
 $export GOPATH=`pwd`
-$ go get github.com/KDF5000/QiniuCmd/src/qupload
+$ go get -u github.com/KDF5000/QiniuCmd/src/qupload
 ```
 `get`成功后，`GOPATH`目录下会有自动编译好的可执行程序，然后复制`GOPATH/src/github.com/KDF5000/QiniuCmd/src/qupload `下的`conf.json`文件复制到当前二进制文件目录或者在运新程序时候通过`-c`指定也可。
 #### 运行
