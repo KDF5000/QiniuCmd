@@ -7,6 +7,7 @@ import (
 	"github.com/atotto/clipboard"
 	"os"
 	"os/exec"
+	"path/filepath"
 )
 
 func usage() {
@@ -18,10 +19,12 @@ func main() {
 	var randKey bool
 	var configFile string
 	// curPath, err := os.Getwd()
-	curPath, err := exec.LookPath(os.Args[0])
+	exePath, err := exec.LookPath(os.Args[0])
+
 	if err != nil {
 		usage()
 	}
+	curPath := filepath.Dir(exePath)
 	// var key string
 	flag.BoolVar(&randKey, "r", false, "generate key randomly, if not using the filename as key")
 	flag.StringVar(&configFile, "c", curPath+"/conf.json", "configure file")
