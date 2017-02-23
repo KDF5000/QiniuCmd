@@ -3,10 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	//"github.com/KDF5000/qsync"
 	"github.com/KDF5000/QiniuCmd/src/qsync"
 	"github.com/atotto/clipboard"
 	"os"
+	"os/exec"
 )
 
 func usage() {
@@ -17,7 +17,8 @@ func usage() {
 func main() {
 	var randKey bool
 	var configFile string
-	curPath, err := os.Getwd()
+	// curPath, err := os.Getwd()
+	curPath, err := exec.LookPath(os.Args[0])
 	if err != nil {
 		usage()
 	}
